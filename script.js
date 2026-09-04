@@ -154,43 +154,6 @@ document.querySelectorAll(".skill-group,.project-card,.manifest,.timeline-item,.
     }
   }
   document.querySelectorAll("[data-count]").forEach(animateCount);
-
-  // Typewriter role line under the name — types, pauses, deletes, repeats.
-  const typeEl = document.getElementById("typeRole");
-  if (typeEl) {
-    const phrases = [
-      "AWS Certified DevOps Engineer.",
-      "Cloud Infrastructure Automation.",
-      "Kubernetes · Terraform · CI/CD.",
-      "Production Reliability, Always.",
-    ];
-    if (prefersReduced) {
-      typeEl.textContent = phrases[0];
-    } else {
-      let pi = 0, ci = 0, deleting = false;
-      const TYPE_MS = 55, DELETE_MS = 28, PAUSE_MS = 1500;
-      (function tick() {
-        const full = phrases[pi];
-        if (!deleting) {
-          ci++;
-          typeEl.textContent = full.slice(0, ci);
-          if (ci === full.length) {
-            deleting = true;
-            setTimeout(tick, PAUSE_MS);
-            return;
-          }
-        } else {
-          ci--;
-          typeEl.textContent = full.slice(0, ci);
-          if (ci === 0) {
-            deleting = false;
-            pi = (pi + 1) % phrases.length;
-          }
-        }
-        setTimeout(tick, deleting ? DELETE_MS : TYPE_MS);
-      })();
-    }
-  }
 })();
 
 // A little something for anyone who opens devtools.
