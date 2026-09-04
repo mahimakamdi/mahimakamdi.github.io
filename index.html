@@ -7,7 +7,7 @@
   <title>Mahima Kamdi | DevOps Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,13 +15,14 @@
   <div class="orb orb-one"></div>
   <div class="orb orb-two"></div>
   <div class="noise"></div>
+  <div class="hazard-strip" aria-hidden="true"></div>
 
   <header class="nav">
-    <a class="brand" href="#home"><span>MK</span> / DEVOPS</a>
+    <a class="brand" href="#home"><span>MK</span> / SHIP IT 🚢</a>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Stack</a>
-      <a href="#projects">Projects</a>
+      <a href="#projects">Cargo</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -32,10 +33,10 @@
     <section id="home" class="hero">
       <div class="hero-copy reveal">
         <div class="eyebrow"><i></i> AWS CERTIFIED · CLOUD · AUTOMATION</div>
-        <h1>Building reliable<br><span>cloud systems.</span></h1>
-        <p class="hero-text">I'm <strong>Mahima Kamdi</strong>, a DevOps Engineer focused on cloud infrastructure, CI/CD, Kubernetes, GitOps and production reliability.</p>
+        <h1>Shipping reliable<br><span>cloud systems.</span></h1>
+        <p class="hero-text">I'm <strong>Mahima Kamdi</strong>, a DevOps Engineer who packs infrastructure, CI/CD, Kubernetes and GitOps into things that don't fall over at 2am.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">Explore my work <span>→</span></a>
+          <a class="btn primary" href="#projects">Open the cargo hold <span>→</span></a>
           <a class="btn ghost" href="https://github.com/mahimakamdi" target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
         <div class="hero-stats">
@@ -46,20 +47,36 @@
       </div>
 
       <div class="hero-visual reveal">
-        <div class="portrait-wrap">
-          <div class="ring ring-a"></div>
-          <div class="ring ring-b"></div>
-          <div class="portrait-glow"></div>
-          <img src="assets/profile.jpg" alt="Mahima Kamdi" class="portrait">
+        <div class="dock">
+          <div class="crate crate-terraform" style="--d:0">
+            <span class="crate-icon">🟪</span>
+            <b>TERRAFORM</b>
+            <small>infra as code</small>
+          </div>
+          <div class="crate crate-k8s" style="--d:1">
+            <span class="crate-icon">◈</span>
+            <b>KUBERNETES</b>
+            <small>orchestration</small>
+          </div>
+          <div class="crate crate-aws" style="--d:2">
+            <span class="crate-icon">☁</span>
+            <b>AWS</b>
+            <small>cloud infra</small>
+          </div>
+          <div class="crate crate-docker" style="--d:3">
+            <span class="crate-icon">🐳</span>
+            <b>DOCKER</b>
+            <small>containers</small>
+          </div>
+          <div class="crane-hook" aria-hidden="true"></div>
+          <div class="id-card">
+            <img src="assets/profile.jpg" alt="Mahima Kamdi" class="id-photo">
+            <div class="id-copy">
+              <b>M. KAMDI</b>
+              <small>CAPTAIN · SS DEVOPS</small>
+            </div>
+          </div>
           <div class="status-chip"><span></span> AVAILABLE FOR DEVOPS ROLES</div>
-        </div>
-        <div class="floating-card cloud-card">
-          <span class="mini-icon">☁</span>
-          <div><b>AWS</b><small>Cloud Infrastructure</small></div>
-        </div>
-        <div class="floating-card kube-card">
-          <span class="mini-icon">◈</span>
-          <div><b>Kubernetes</b><small>Container Orchestration</small></div>
         </div>
       </div>
     </section>
@@ -97,10 +114,10 @@
     </section>
 
     <section id="projects" class="section projects">
-      <div class="section-label">03 / SELECTED WORK</div>
+      <div class="section-label">03 / CARGO HOLD</div>
       <div class="section-heading">
         <h2>Projects that show<br><span>how I operate.</span></h2>
-        <p>End-to-end cloud, automation and platform engineering.</p>
+        <p>Every crate below ships with a GitHub link — pop the lid with "View README" to see what's inside.</p>
       </div>
 
       <article class="project-feature">
@@ -112,6 +129,10 @@
           <p>Designed and deployed a production-grade logistics application on AWS EKS with scalable, highly available Kubernetes infrastructure. Automated infrastructure with Terraform/OpenTofu and Ansible, built secure CI/CD with Jenkins, SonarQube and Trivy, and implemented GitOps using ArgoCD and Helm.</p>
           <div class="metrics"><div><b>60%</b><span>less provisioning time</span></div><div><b>40%</b><span>faster deployment</span></div><div><b>15 min</b><span>RTO with Velero</span></div></div>
           <div class="tags"><span>AWS EKS</span><span>Terraform</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>ArgoCD</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>Trivy</span></div>
+          <div class="project-actions">
+            <a class="pbtn gh" href="https://github.com/mahimakamdi/Logistics-Application" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <button class="pbtn view" data-view data-repo="mahimakamdi/Logistics-Application" data-branch="main" data-title="Logistics Application">📄 View README</button>
+          </div>
         </div>
       </article>
 
@@ -123,6 +144,7 @@
           <p>Serverless cost-governance system using Python, Boto3 and Lambda to detect and clean up orphaned EBS volumes, with EventBridge scheduling, CloudWatch audit logs and least-privilege IAM.</p>
           <div class="project-result">≈ $20–50/month savings</div>
           <div class="tags"><span>Python</span><span>Boto3</span><span>Lambda</span><span>EventBridge</span><span>IAM</span><span>CloudWatch</span></div>
+          <div class="project-actions"><span class="pbtn soon">Repo coming soon</span></div>
         </article>
         <article class="project-card">
           <div class="project-number">03</div>
@@ -131,7 +153,89 @@
           <p>RAG-based natural-language data assistant with schema-aware retrieval, natural-language-to-SQL generation, secure validation and a Dockerized FastAPI service deployed on AWS.</p>
           <div class="project-result">3 sec avg response time</div>
           <div class="tags"><span>Python</span><span>FastAPI</span><span>Docker</span><span>AWS</span><span>LangChain</span><span>PostgreSQL</span></div>
+          <div class="project-actions"><span class="pbtn soon">Repo coming soon</span></div>
         </article>
+      </div>
+
+      <div class="manifest">
+        <div class="manifest-head">
+          <h3>More from the cargo manifest</h3>
+          <p>Smaller builds and infra experiments — same "View README" trick works on each.</p>
+        </div>
+        <div class="manifest-list">
+          <article class="manifest-row">
+            <span class="m-icon">🧱</span>
+            <div class="m-body"><b>terraform-aws-infra</b><p>Reusable Terraform modules for provisioning AWS infrastructure with remote state and CI/CD wiring.</p></div>
+            <span class="m-lang">Terraform</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/terraform-aws-infra" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/terraform-aws-infra" data-branch="main" data-title="terraform-aws-infra">📄 View README</button>
+            </div>
+          </article>
+          <article class="manifest-row">
+            <span class="m-icon">💰</span>
+            <div class="m-body"><b>AWS-Cost-Monitoring-Budget-Alerts</b><p>AWS Budget alerts and cost-monitoring setup to catch spend spikes before they hurt.</p></div>
+            <span class="m-lang">AWS</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/AWS-Cost-Monitoring-Budget-Alerts" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/AWS-Cost-Monitoring-Budget-Alerts" data-branch="main" data-title="AWS Cost Monitoring & Budget Alerts">📄 View README</button>
+            </div>
+          </article>
+          <article class="manifest-row">
+            <span class="m-icon">🗄</span>
+            <div class="m-body"><b>Cloud-Backup-Automation-using-AWS-Lambda</b><p>Serverless backup automation for AWS resources, scheduled and monitored with Lambda.</p></div>
+            <span class="m-lang">Lambda</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/Cloud-Backup-Automation-using-AWS-Lambda" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/Cloud-Backup-Automation-using-AWS-Lambda" data-branch="main" data-title="Cloud Backup Automation using AWS Lambda">📄 View README</button>
+            </div>
+          </article>
+          <article class="manifest-row">
+            <span class="m-icon">🔐</span>
+            <div class="m-body"><b>Custom-VPC-with-Bastion-Host</b><p>Hand-rolled AWS VPC with public/private subnets and a bastion host for locked-down SSH access.</p></div>
+            <span class="m-lang">AWS</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/Custom-VPC-with-Bastion-Host" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/Custom-VPC-with-Bastion-Host" data-branch="main" data-title="Custom VPC with Bastion Host">📄 View README</button>
+            </div>
+          </article>
+          <article class="manifest-row">
+            <span class="m-icon">🐳</span>
+            <div class="m-body"><b>Docker-project</b><p>Containerizing an application end-to-end with Docker — build, image hygiene, and run.</p></div>
+            <span class="m-lang">JavaScript</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/Docker-project" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/Docker-project" data-branch="main" data-title="Docker Project">📄 View README</button>
+            </div>
+          </article>
+          <article class="manifest-row">
+            <span class="m-icon">🐧</span>
+            <div class="m-body"><b>Linux-Server-Deployment</b><p>Provisioning and hardening a Linux server for production deployment.</p></div>
+            <span class="m-lang">Linux</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/Linux-Server-Deployment" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/Linux-Server-Deployment" data-branch="main" data-title="Linux Server Deployment">📄 View README</button>
+            </div>
+          </article>
+          <article class="manifest-row">
+            <span class="m-icon">🌐</span>
+            <div class="m-body"><b>Web-Server-Construction-CCNA</b><p>Networking fundamentals project — building and configuring a web server environment.</p></div>
+            <span class="m-lang">Networking</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/Web-Server-Construction-CCNA" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/Web-Server-Construction-CCNA" data-branch="main" data-title="Web Server Construction (CCNA)">📄 View README</button>
+            </div>
+          </article>
+          <article class="manifest-row">
+            <span class="m-icon">⚙</span>
+            <div class="m-body"><b>devops_project</b><p>Bash + Ansible automation — monitoring scripts, backups, user management and Nginx deployment.</p></div>
+            <span class="m-lang">Shell</span>
+            <div class="project-actions">
+              <a class="pbtn gh" href="https://github.com/mahimakamdi/devops_project" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <button class="pbtn view" data-view data-repo="mahimakamdi/devops_project" data-branch="main" data-title="devops_project">📄 View README</button>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -174,7 +278,22 @@
     </section>
   </main>
 
-  <footer><span>© 2026 Mahima Kamdi</span><span>DEVOPS / CLOUD / AUTOMATION</span><span>Built with intent.</span></footer>
-  <script src="script.js"></script>
+  <footer><span>© 2026 Mahima Kamdi</span><span>DEVOPS / CLOUD / AUTOMATION</span><span>Packed &amp; shipped with intent.</span></footer>
+
+  <div class="modal-overlay" id="viewerOverlay">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+      <div class="modal-head">
+        <span class="modal-tag">MANIFEST</span>
+        <button class="modal-close" id="viewerClose" aria-label="Close">✕</button>
+      </div>
+      <h3 class="modal-title" id="viewerTitle">Project</h3>
+      <div class="modal-body" id="viewerBody"></div>
+      <div class="modal-foot"><a id="viewerGhLink" href="#" target="_blank" rel="noreferrer">Open repository on GitHub ↗</a></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.5/purify.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
