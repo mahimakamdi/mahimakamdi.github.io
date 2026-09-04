@@ -15,14 +15,13 @@
   <div class="orb orb-one"></div>
   <div class="orb orb-two"></div>
   <div class="noise"></div>
-  <div class="hazard-strip" aria-hidden="true"></div>
 
   <header class="nav">
-    <a class="brand" href="#home"><span>MK</span> / SHIP IT 🚢</a>
+    <a class="brand" href="#home"><span>MK</span> Mahima Kamdi</a>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Stack</a>
-      <a href="#projects">Cargo</a>
+      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -32,51 +31,30 @@
   <main>
     <section id="home" class="hero">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><i></i> MAHIMA KAMDI · AWS CERTIFIED DEVOPS ENGINEER</div>
-        <h1>Shipping reliable<br><span class="rotate-word" id="rotateWord">cloud systems.</span></h1>
-        <p class="hero-text">I'm <strong>Mahima Kamdi</strong>, a DevOps Engineer who packs infrastructure, CI/CD, Kubernetes and GitOps into things that don't fall over at 2am.</p>
+        <div class="pill"><span></span> Available for DevOps roles</div>
+        <h1>Mahima <span class="grad-text">Kamdi</span></h1>
+        <div class="role-line"><span class="type-cursor" id="typeRole"></span></div>
+        <p class="hero-text">I build and automate <strong>cloud infrastructure</strong> — Kubernetes, Terraform, CI/CD and GitOps — so production stays boring, in a good way.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">Open the cargo hold <span>→</span></a>
-          <a class="btn ghost" href="https://github.com/mahimakamdi" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn primary" href="assets/Mahima_Kamdi_Resume.pdf" target="_blank">Download Resume ↓</a>
+          <a class="btn ghost" href="https://github.com/mahimakamdi" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/mahima-kamdi" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
         <div class="hero-stats">
           <div><strong data-count="3.4" data-suffix="+">0</strong><small>Years Experience</small></div>
+          <div><strong data-count="13" data-suffix="+">0</strong><small>Repos Shipped</small></div>
           <div><strong data-count="10" data-suffix="+">0</strong><small>Releases / Month</small></div>
           <div><strong data-count="99" data-suffix="%">0</strong><small>Project Uptime</small></div>
         </div>
       </div>
 
       <div class="hero-visual reveal">
-        <div class="dock">
-          <div class="crate crate-terraform" style="--d:0">
-            <span class="crate-icon">🟪</span>
-            <b>TERRAFORM</b>
-            <small>infra as code</small>
-          </div>
-          <div class="crate crate-k8s" style="--d:1">
-            <span class="crate-icon">◈</span>
-            <b>KUBERNETES</b>
-            <small>orchestration</small>
-          </div>
-          <div class="crate crate-aws" style="--d:2">
-            <span class="crate-icon">☁</span>
-            <b>AWS</b>
-            <small>cloud infra</small>
-          </div>
-          <div class="crate crate-docker" style="--d:3">
-            <span class="crate-icon">🐳</span>
-            <b>DOCKER</b>
-            <small>containers</small>
-          </div>
-          <div class="crane-hook" aria-hidden="true"></div>
-          <div class="id-card tilt">
-            <img src="assets/profile.jpg" alt="Mahima Kamdi" class="id-photo">
-            <div class="id-copy">
-              <b>M. KAMDI</b>
-              <small>CAPTAIN · SS DEVOPS</small>
-            </div>
-          </div>
-          <div class="status-chip"><span></span> AVAILABLE FOR DEVOPS ROLES</div>
+        <div class="photo-wrap tilt">
+          <div class="photo-ring"></div>
+          <img src="assets/profile.jpg" alt="Mahima Kamdi" class="hero-photo">
+          <div class="badge-chip badge-1" title="AWS"><span>☁</span></div>
+          <div class="badge-chip badge-2" title="Kubernetes"><span>◈</span></div>
+          <div class="badge-chip badge-3" title="Terraform"><span>▤</span></div>
         </div>
       </div>
     </section>
@@ -92,7 +70,7 @@
       <div class="section-label">01 / ABOUT</div>
       <div class="about-grid">
         <div>
-          <h2>Turning infrastructure<br><span>into automation.</span></h2>
+          <h2>Turning infrastructure<br><span class="grad-text">into automation.</span></h2>
         </div>
         <div>
           <p class="lead">AWS Certified Solutions Architect – Associate with 3.4+ years of experience in release engineering, CI/CD automation, cloud infrastructure and production support.</p>
@@ -107,24 +85,42 @@
     <section id="skills" class="section">
       <div class="section-label">02 / TECH STACK</div>
       <div class="section-heading">
-        <h2>Tools I build with.</h2>
-        <p>From infrastructure provisioning to production monitoring.</p>
+        <h2>Skills &amp; technologies.</h2>
+        <p>Hands-on across cloud infrastructure, automation and reliability engineering.</p>
       </div>
-      <div class="skill-grid">
-        <article class="skill-card tilt"><span class="skill-no">01</span><h3>☁ Cloud & Infra</h3><p>AWS · EC2 · VPC · IAM · S3 · RDS · EKS · Auto Scaling · ELB · CloudWatch</p><b>Terraform · OpenTofu · Ansible · Linux</b></article>
-        <article class="skill-card tilt"><span class="skill-no">02</span><h3>⟳ CI/CD & GitOps</h3><p>Jenkins · GitHub Actions · Git · GitHub · Bitbucket · Gerrit</p><b>Helm · ArgoCD · FluxCD · Maven · Gradle</b></article>
-        <article class="skill-card tilt"><span class="skill-no">03</span><h3>◈ Containers</h3><p>Docker · Kubernetes · Helm · EKS</p><b>Containerized deployments · Rollbacks · Scaling</b></article>
-        <article class="skill-card tilt"><span class="skill-no">04</span><h3>⌁ DevSecOps & Observability</h3><p>SonarQube · Trivy · Prometheus · Grafana</p><b>CloudWatch · Datadog · Log Analysis · Alerting</b></article>
-        <article class="skill-card tilt"><span class="skill-no">05</span><h3>⌘ Automation</h3><p>Python · Shell Scripting · Groovy</p><b>Boto3 · REST APIs · SQL · MySQL · MongoDB</b></article>
-        <article class="skill-card tilt"><span class="skill-no">06</span><h3>⚙ Operations</h3><p>Networking · TCP/IP · DNS · HTTP/HTTPS · SSH</p><b>Incident Management · RCA · Release Management</b></article>
+      <div class="skill-groups">
+        <div class="skill-group tilt">
+          <h3>☁ Cloud &amp; Infra</h3>
+          <div class="chip-row"><span>AWS</span><span>EC2</span><span>VPC</span><span>IAM</span><span>S3</span><span>RDS</span><span>EKS</span><span>Auto Scaling</span><span>ELB</span><span>CloudWatch</span><span>Terraform</span><span>OpenTofu</span><span>Ansible</span><span>Linux</span></div>
+        </div>
+        <div class="skill-group tilt">
+          <h3>⟳ CI/CD &amp; GitOps</h3>
+          <div class="chip-row"><span>Jenkins</span><span>GitHub Actions</span><span>Git</span><span>GitHub</span><span>Bitbucket</span><span>Gerrit</span><span>Helm</span><span>ArgoCD</span><span>FluxCD</span><span>Maven</span><span>Gradle</span></div>
+        </div>
+        <div class="skill-group tilt">
+          <h3>◈ Containers</h3>
+          <div class="chip-row"><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>EKS</span><span>Containerized Deployments</span><span>Rollbacks</span><span>Scaling</span></div>
+        </div>
+        <div class="skill-group tilt">
+          <h3>⌁ DevSecOps &amp; Observability</h3>
+          <div class="chip-row"><span>SonarQube</span><span>Trivy</span><span>Prometheus</span><span>Grafana</span><span>CloudWatch</span><span>Datadog</span><span>Log Analysis</span><span>Alerting</span></div>
+        </div>
+        <div class="skill-group tilt">
+          <h3>⌘ Automation</h3>
+          <div class="chip-row"><span>Python</span><span>Shell Scripting</span><span>Groovy</span><span>Boto3</span><span>REST APIs</span><span>SQL</span><span>MySQL</span><span>MongoDB</span></div>
+        </div>
+        <div class="skill-group tilt">
+          <h3>⚙ Operations</h3>
+          <div class="chip-row"><span>Networking</span><span>TCP/IP</span><span>DNS</span><span>HTTP/HTTPS</span><span>SSH</span><span>Incident Management</span><span>RCA</span><span>Release Management</span></div>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section projects">
-      <div class="section-label">03 / CARGO HOLD</div>
+      <div class="section-label">03 / PROJECTS</div>
       <div class="section-heading">
-        <h2>Projects that show<br><span>how I operate.</span></h2>
-        <p>Every crate below ships with a GitHub link — pop the lid with "View README" to see what's inside.</p>
+        <h2>Projects that show<br><span class="grad-text">how I operate.</span></h2>
+        <p>Every project ships with a GitHub link — "View README" opens it right here.</p>
       </div>
 
       <div class="project-grid uniform">
@@ -159,7 +155,7 @@
 
       <div class="manifest">
         <div class="manifest-head">
-          <h3>More from the cargo manifest</h3>
+          <h3>More projects</h3>
           <p>Smaller builds and infra experiments — same "View README" trick works on each.</p>
         </div>
         <div class="manifest-list">
@@ -268,7 +264,7 @@
     <section id="contact" class="section contact">
       <div class="section-label">06 / CONTACT</div>
       <div class="contact-box">
-        <div><p class="eyebrow"><i></i> LET'S BUILD SOMETHING RELIABLE</p><h2>Have a cloud challenge?<br><span>Let's talk.</span></h2></div>
+        <div><p class="eyebrow"><i></i> LET'S BUILD SOMETHING RELIABLE</p><h2>Have a cloud challenge?<br><span class="grad-text">Let's talk.</span></h2></div>
         <div class="contact-links">
           <a href="mailto:mahimakamdi25@gmail.com">mahimakamdi25@gmail.com <span>↗</span></a>
           <a href="https://www.linkedin.com/in/mahima-kamdi" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
@@ -278,12 +274,12 @@
     </section>
   </main>
 
-  <footer><span>© 2026 Mahima Kamdi</span><span>DEVOPS / CLOUD / AUTOMATION</span><span>Packed &amp; shipped with intent.</span></footer>
+  <footer><span>© 2026 Mahima Kamdi</span><span>DEVOPS / CLOUD / AUTOMATION</span><span>Designed &amp; built by Mahima.</span></footer>
 
   <div class="modal-overlay" id="viewerOverlay">
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
       <div class="modal-head">
-        <span class="modal-tag">MANIFEST</span>
+        <span class="modal-tag">README</span>
         <button class="modal-close" id="viewerClose" aria-label="Close">✕</button>
       </div>
       <h3 class="modal-title" id="viewerTitle">Project</h3>

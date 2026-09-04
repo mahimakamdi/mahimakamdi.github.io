@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
 // Add a subtle reveal to major content blocks.
-document.querySelectorAll(".skill-card,.project-card,.project-feature,.manifest,.timeline-item,.credential-card,.contact-box")
+document.querySelectorAll(".skill-group,.project-card,.manifest,.timeline-item,.credential-card,.contact-box")
   .forEach((el, i) => {
     el.classList.add("reveal");
     el.style.transitionDelay = `${Math.min(i * 45, 300)}ms`;
@@ -85,7 +85,7 @@ document.querySelectorAll(".skill-card,.project-card,.project-feature,.manifest,
       return;
     }
 
-    body.innerHTML = `<p class="loader">📦 Fetching cargo manifest (README) from GitHub…</p>`;
+    body.innerHTML = `<p class="loader">📄 Fetching README from GitHub…</p>`;
     const branches = branch ? [branch, "main", "master"] : ["main", "master"];
     const uniqueBranches = [...new Set(branches)];
 
@@ -94,7 +94,7 @@ document.querySelectorAll(".skill-card,.project-card,.project-feature,.manifest,
     if (md) {
       html = renderMarkdown(md);
     } else {
-      html = `<div class="fallback">No README has been unpacked for this crate yet 📦<br>Pop over to GitHub to see the raw code instead.</div>`;
+      html = `<div class="fallback">No README published for this repo yet 📄<br>Head over to GitHub to browse the raw code instead.</div>`;
     }
     cache.set(cacheKey, html);
     body.innerHTML = html;
@@ -113,8 +113,8 @@ document.querySelectorAll(".skill-card,.project-card,.project-feature,.manifest,
 })();
 
 // ---------------------------------------------------------------------------
-// Modern cosmetic flourishes: mouse-tilt cards, count-up stats, rotating
-// headline word. All skipped gracefully on touch devices / reduced motion.
+// Modern cosmetic flourishes: mouse-tilt cards, count-up stats, typewriter
+// role line. All skipped gracefully on touch devices / reduced motion.
 // ---------------------------------------------------------------------------
 (function () {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -155,30 +155,50 @@ document.querySelectorAll(".skill-card,.project-card,.project-feature,.manifest,
   }
   document.querySelectorAll("[data-count]").forEach(animateCount);
 
-  // Rotating headline word — a little wink at what the job actually involves.
-  const rotateEl = document.getElementById("rotateWord");
-  if (rotateEl && !prefersReduced) {
-    const words = ["cloud systems.", "K8s clusters.", "CI/CD pipelines.", "AWS bills, tamed.", "production fires."];
-    let idx = 0;
-    setInterval(() => {
-      rotateEl.style.opacity = 0;
-      rotateEl.style.transform = "translateY(6px)";
-      setTimeout(() => {
-        idx = (idx + 1) % words.length;
-        rotateEl.textContent = words[idx];
-        rotateEl.style.opacity = 1;
-        rotateEl.style.transform = "translateY(0)";
-      }, 350);
-    }, 2600);
+  // Typewriter role line under the name — types, pauses, deletes, repeats.
+  const typeEl = document.getElementById("typeRole");
+  if (typeEl) {
+    const phrases = [
+      "AWS Certified DevOps Engineer.",
+      "Cloud Infrastructure Automation.",
+      "Kubernetes · Terraform · CI/CD.",
+      "Production Reliability, Always.",
+    ];
+    if (prefersReduced) {
+      typeEl.textContent = phrases[0];
+    } else {
+      let pi = 0, ci = 0, deleting = false;
+      const TYPE_MS = 55, DELETE_MS = 28, PAUSE_MS = 1500;
+      (function tick() {
+        const full = phrases[pi];
+        if (!deleting) {
+          ci++;
+          typeEl.textContent = full.slice(0, ci);
+          if (ci === full.length) {
+            deleting = true;
+            setTimeout(tick, PAUSE_MS);
+            return;
+          }
+        } else {
+          ci--;
+          typeEl.textContent = full.slice(0, ci);
+          if (ci === 0) {
+            deleting = false;
+            pi = (pi + 1) % phrases.length;
+          }
+        }
+        setTimeout(tick, deleting ? DELETE_MS : TYPE_MS);
+      })();
+    }
   }
 })();
 
 // A little something for anyone who opens devtools.
 console.log(
-  "%c📦 Nice, you found the engine room.",
-  "font-family:monospace;font-size:13px;color:#ff9f43;font-weight:bold;"
+  "%c👋 Nice, you found the engine room.",
+  "font-family:monospace;font-size:13px;color:#8b5cf6;font-weight:bold;"
 );
 console.log(
   "%cIf you're a recruiter reading source instead of the page — I like you already. mahimakamdi25@gmail.com",
-  "font-family:monospace;font-size:11px;color:#9aa0ac;"
+  "font-family:monospace;font-size:11px;color:#9995ab;"
 );
