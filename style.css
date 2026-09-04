@@ -13,7 +13,7 @@ body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle 
 .brand{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700;color:var(--text);text-decoration:none;letter-spacing:.02em;font-size:14px}.brand span{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:linear-gradient(145deg,var(--accent),var(--accent2));color:#0a0a12;font-size:12px;font-weight:800}
 .nav nav{display:flex;gap:28px}.nav nav a,.nav-cta{font-size:13px;color:var(--muted);text-decoration:none;transition:.25s}.nav nav a:hover{color:var(--text)}.nav-cta{border:1px solid var(--line);padding:9px 14px;border-radius:7px;color:var(--text)}
 
-.hero{max-width:1240px;min-height:calc(100vh - 78px);margin:auto;padding:60px 28px 80px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}
+.hero{max-width:1240px;min-height:calc(100vh - 78px);margin:auto;padding:50px 28px 56px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}
 .pill{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;font-weight:700;color:var(--text);border:1px solid var(--line);background:rgba(139,92,246,.08);padding:8px 14px;border-radius:99px;font-family:var(--mono)}
 .pill span{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 12px var(--accent2)}
 .section-label{font-size:11px;letter-spacing:.18em;color:var(--accent2);font-weight:700;font-family:var(--mono)}
@@ -45,8 +45,8 @@ h1{font-size:clamp(50px,6.5vw,80px);letter-spacing:-.045em;margin:22px 0 6px}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 
-.section{max-width:1240px;margin:auto;padding:110px 28px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:42px}.about h2,.section-heading h2{font-size:clamp(38px,5vw,60px);letter-spacing:-.04em}.lead{font-size:21px;color:var(--text);margin-bottom:18px}.about-grid p:not(.lead){color:var(--muted);font-size:15px}.about-pills,.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}.about-pills span,.tags span{font-size:10px;color:#cdc8de;border:1px solid var(--line);border-radius:99px;padding:6px 9px;font-family:var(--mono)}
-.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin:25px 0 42px}.section-heading p{color:var(--muted);font-size:14px;max-width:320px}
+.section{max-width:1240px;margin:auto;padding:64px 28px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:26px}.about h2,.section-heading h2{font-size:clamp(38px,5vw,60px);letter-spacing:-.04em}.lead{font-size:21px;color:var(--text);margin-bottom:18px}.about-grid p:not(.lead){color:var(--muted);font-size:15px}.about-pills,.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}.about-pills span,.tags span{font-size:10px;color:#cdc8de;border:1px solid var(--line);border-radius:99px;padding:6px 9px;font-family:var(--mono)}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin:16px 0 30px}.section-heading p{color:var(--muted);font-size:14px;max-width:320px}
 
 /* --- skills: tag-chip groups --- */
 .skill-groups{display:grid;grid-template-columns:1fr 1fr;gap:14px}
