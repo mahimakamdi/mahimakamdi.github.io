@@ -32,17 +32,17 @@
   <main>
     <section id="home" class="hero">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><i></i> AWS CERTIFIED · CLOUD · AUTOMATION</div>
-        <h1>Shipping reliable<br><span>cloud systems.</span></h1>
+        <div class="eyebrow"><i></i> MAHIMA KAMDI · AWS CERTIFIED DEVOPS ENGINEER</div>
+        <h1>Shipping reliable<br><span class="rotate-word" id="rotateWord">cloud systems.</span></h1>
         <p class="hero-text">I'm <strong>Mahima Kamdi</strong>, a DevOps Engineer who packs infrastructure, CI/CD, Kubernetes and GitOps into things that don't fall over at 2am.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#projects">Open the cargo hold <span>→</span></a>
           <a class="btn ghost" href="https://github.com/mahimakamdi" target="_blank" rel="noreferrer">GitHub ↗</a>
         </div>
         <div class="hero-stats">
-          <div><strong>3.4+</strong><small>Years Experience</small></div>
-          <div><strong>10+</strong><small>Releases / Month</small></div>
-          <div><strong>99%</strong><small>Project Uptime</small></div>
+          <div><strong data-count="3.4" data-suffix="+">0</strong><small>Years Experience</small></div>
+          <div><strong data-count="10" data-suffix="+">0</strong><small>Releases / Month</small></div>
+          <div><strong data-count="99" data-suffix="%">0</strong><small>Project Uptime</small></div>
         </div>
       </div>
 
@@ -69,7 +69,7 @@
             <small>containers</small>
           </div>
           <div class="crane-hook" aria-hidden="true"></div>
-          <div class="id-card">
+          <div class="id-card tilt">
             <img src="assets/profile.jpg" alt="Mahima Kamdi" class="id-photo">
             <div class="id-copy">
               <b>M. KAMDI</b>
@@ -80,6 +80,13 @@
         </div>
       </div>
     </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>AWS</span><span>Terraform</span><span>Kubernetes</span><span>Docker</span><span>Jenkins</span><span>ArgoCD</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>Python</span><span>Ansible</span><span>GitOps</span>
+        <span>AWS</span><span>Terraform</span><span>Kubernetes</span><span>Docker</span><span>Jenkins</span><span>ArgoCD</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>Python</span><span>Ansible</span><span>GitOps</span>
+      </div>
+    </div>
 
     <section id="about" class="section about">
       <div class="section-label">01 / ABOUT</div>
@@ -104,12 +111,12 @@
         <p>From infrastructure provisioning to production monitoring.</p>
       </div>
       <div class="skill-grid">
-        <article class="skill-card"><span class="skill-no">01</span><h3>☁ Cloud & Infra</h3><p>AWS · EC2 · VPC · IAM · S3 · RDS · EKS · Auto Scaling · ELB · CloudWatch</p><b>Terraform · OpenTofu · Ansible · Linux</b></article>
-        <article class="skill-card"><span class="skill-no">02</span><h3>⟳ CI/CD & GitOps</h3><p>Jenkins · GitHub Actions · Git · GitHub · Bitbucket · Gerrit</p><b>Helm · ArgoCD · FluxCD · Maven · Gradle</b></article>
-        <article class="skill-card"><span class="skill-no">03</span><h3>◈ Containers</h3><p>Docker · Kubernetes · Helm · EKS</p><b>Containerized deployments · Rollbacks · Scaling</b></article>
-        <article class="skill-card"><span class="skill-no">04</span><h3>⌁ DevSecOps & Observability</h3><p>SonarQube · Trivy · Prometheus · Grafana</p><b>CloudWatch · Datadog · Log Analysis · Alerting</b></article>
-        <article class="skill-card"><span class="skill-no">05</span><h3>⌘ Automation</h3><p>Python · Shell Scripting · Groovy</p><b>Boto3 · REST APIs · SQL · MySQL · MongoDB</b></article>
-        <article class="skill-card"><span class="skill-no">06</span><h3>⚙ Operations</h3><p>Networking · TCP/IP · DNS · HTTP/HTTPS · SSH</p><b>Incident Management · RCA · Release Management</b></article>
+        <article class="skill-card tilt"><span class="skill-no">01</span><h3>☁ Cloud & Infra</h3><p>AWS · EC2 · VPC · IAM · S3 · RDS · EKS · Auto Scaling · ELB · CloudWatch</p><b>Terraform · OpenTofu · Ansible · Linux</b></article>
+        <article class="skill-card tilt"><span class="skill-no">02</span><h3>⟳ CI/CD & GitOps</h3><p>Jenkins · GitHub Actions · Git · GitHub · Bitbucket · Gerrit</p><b>Helm · ArgoCD · FluxCD · Maven · Gradle</b></article>
+        <article class="skill-card tilt"><span class="skill-no">03</span><h3>◈ Containers</h3><p>Docker · Kubernetes · Helm · EKS</p><b>Containerized deployments · Rollbacks · Scaling</b></article>
+        <article class="skill-card tilt"><span class="skill-no">04</span><h3>⌁ DevSecOps & Observability</h3><p>SonarQube · Trivy · Prometheus · Grafana</p><b>CloudWatch · Datadog · Log Analysis · Alerting</b></article>
+        <article class="skill-card tilt"><span class="skill-no">05</span><h3>⌘ Automation</h3><p>Python · Shell Scripting · Groovy</p><b>Boto3 · REST APIs · SQL · MySQL · MongoDB</b></article>
+        <article class="skill-card tilt"><span class="skill-no">06</span><h3>⚙ Operations</h3><p>Networking · TCP/IP · DNS · HTTP/HTTPS · SSH</p><b>Incident Management · RCA · Release Management</b></article>
       </div>
     </section>
 
@@ -120,39 +127,32 @@
         <p>Every crate below ships with a GitHub link — pop the lid with "View README" to see what's inside.</p>
       </div>
 
-      <article class="project-feature">
-        <div class="project-number">01</div>
-        <div class="project-content">
-          <div class="project-top"><span>FLAGSHIP PROJECT</span><span>99% UPTIME</span></div>
+      <div class="project-grid uniform">
+        <article class="project-card tilt">
+          <div class="project-top"><span class="project-number">01</span><span class="project-type">END-TO-END DEVOPS</span></div>
           <h3>Logistics Application</h3>
-          <h4>End-to-End DevOps Automation</h4>
-          <p>Designed and deployed a production-grade logistics application on AWS EKS with scalable, highly available Kubernetes infrastructure. Automated infrastructure with Terraform/OpenTofu and Ansible, built secure CI/CD with Jenkins, SonarQube and Trivy, and implemented GitOps using ArgoCD and Helm.</p>
-          <div class="metrics"><div><b>60%</b><span>less provisioning time</span></div><div><b>40%</b><span>faster deployment</span></div><div><b>15 min</b><span>RTO with Velero</span></div></div>
-          <div class="tags"><span>AWS EKS</span><span>Terraform</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>ArgoCD</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>Trivy</span></div>
+          <p>Production-grade logistics app on AWS EKS — Terraform/OpenTofu + Ansible infra, Jenkins/SonarQube/Trivy CI/CD, GitOps via ArgoCD and Helm.</p>
+          <div class="project-result">99% uptime · 40% faster deploys</div>
+          <div class="tags"><span>AWS EKS</span><span>Terraform</span><span>Kubernetes</span><span>Jenkins</span><span>ArgoCD</span><span>Helm</span></div>
           <div class="project-actions">
             <a class="pbtn gh" href="https://github.com/mahimakamdi/Logistics-Application" target="_blank" rel="noreferrer">GitHub ↗</a>
             <button class="pbtn view" data-view data-repo="mahimakamdi/Logistics-Application" data-branch="main" data-title="Logistics Application">📄 View README</button>
           </div>
-        </div>
-      </article>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-number">02</div>
-          <span class="project-type">CLOUD AUTOMATION</span>
+        </article>
+        <article class="project-card tilt">
+          <div class="project-top"><span class="project-number">02</span><span class="project-type">CLOUD AUTOMATION</span></div>
           <h3>AWS Cost Optimization Automation</h3>
-          <p>Serverless cost-governance system using Python, Boto3 and Lambda to detect and clean up orphaned EBS volumes, with EventBridge scheduling, CloudWatch audit logs and least-privilege IAM.</p>
+          <p>Serverless cost-governance system using Python, Boto3 and Lambda to detect and clean up orphaned EBS volumes, with EventBridge scheduling and least-privilege IAM.</p>
           <div class="project-result">≈ $20–50/month savings</div>
-          <div class="tags"><span>Python</span><span>Boto3</span><span>Lambda</span><span>EventBridge</span><span>IAM</span><span>CloudWatch</span></div>
+          <div class="tags"><span>Python</span><span>Boto3</span><span>Lambda</span><span>EventBridge</span><span>IAM</span></div>
           <div class="project-actions"><span class="pbtn soon">Repo coming soon</span></div>
         </article>
-        <article class="project-card">
-          <div class="project-number">03</div>
-          <span class="project-type">AI + CLOUD</span>
+        <article class="project-card tilt">
+          <div class="project-top"><span class="project-number">03</span><span class="project-type">AI + CLOUD</span></div>
           <h3>AI Data Assistant</h3>
-          <p>RAG-based natural-language data assistant with schema-aware retrieval, natural-language-to-SQL generation, secure validation and a Dockerized FastAPI service deployed on AWS.</p>
+          <p>RAG-based natural-language data assistant with schema-aware retrieval, NL-to-SQL generation and a Dockerized FastAPI service deployed on AWS.</p>
           <div class="project-result">3 sec avg response time</div>
-          <div class="tags"><span>Python</span><span>FastAPI</span><span>Docker</span><span>AWS</span><span>LangChain</span><span>PostgreSQL</span></div>
+          <div class="tags"><span>Python</span><span>FastAPI</span><span>Docker</span><span>LangChain</span><span>PostgreSQL</span></div>
           <div class="project-actions"><span class="pbtn soon">Repo coming soon</span></div>
         </article>
       </div>

@@ -112,6 +112,67 @@ document.querySelectorAll(".skill-card,.project-card,.project-feature,.manifest,
   });
 })();
 
+// ---------------------------------------------------------------------------
+// Modern cosmetic flourishes: mouse-tilt cards, count-up stats, rotating
+// headline word. All skipped gracefully on touch devices / reduced motion.
+// ---------------------------------------------------------------------------
+(function () {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  // Tilt-on-mousemove for skill cards, project cards and the ID badge.
+  if (canHover && !prefersReduced) {
+    document.querySelectorAll(".tilt").forEach((el) => {
+      el.addEventListener("mousemove", (e) => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = `perspective(700px) rotateX(${(-y * 8).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) translateY(-4px)`;
+      });
+      el.addEventListener("mouseleave", () => { el.style.transform = ""; });
+    });
+  }
+
+  // Count-up hero stats (3.4+, 10+, 99%).
+  function animateCount(el) {
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || "";
+    const isFloat = !Number.isInteger(target);
+    const duration = 1100;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = target * eased;
+      el.textContent = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    if (prefersReduced) {
+      el.textContent = (isFloat ? target.toFixed(1) : target) + suffix;
+    } else {
+      requestAnimationFrame(tick);
+    }
+  }
+  document.querySelectorAll("[data-count]").forEach(animateCount);
+
+  // Rotating headline word — a little wink at what the job actually involves.
+  const rotateEl = document.getElementById("rotateWord");
+  if (rotateEl && !prefersReduced) {
+    const words = ["cloud systems.", "K8s clusters.", "CI/CD pipelines.", "AWS bills, tamed.", "production fires."];
+    let idx = 0;
+    setInterval(() => {
+      rotateEl.style.opacity = 0;
+      rotateEl.style.transform = "translateY(6px)";
+      setTimeout(() => {
+        idx = (idx + 1) % words.length;
+        rotateEl.textContent = words[idx];
+        rotateEl.style.opacity = 1;
+        rotateEl.style.transform = "translateY(0)";
+      }, 350);
+    }, 2600);
+  }
+})();
+
 // A little something for anyone who opens devtools.
 console.log(
   "%c📦 Nice, you found the engine room.",
